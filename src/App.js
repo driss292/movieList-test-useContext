@@ -1,10 +1,18 @@
 import "./App.css";
+import MovieList from "./MovieList";
+import Nav from "./Nav";
+import { MovieProvider } from "./MovieContext";
+import AddMovies from "./AddMovies";
 
 function App() {
   return (
-    <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
-    </div>
+    <MovieProvider>
+      <div className="App">
+        <Nav />
+        <MovieList />
+        <AddMovies />
+      </div>
+    </MovieProvider>
   );
 }
 
